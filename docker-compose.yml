@@ -1,0 +1,9 @@
+services:
+  maisonflix:
+    build: .
+    container_name: maisonflix
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./media:/app/media:ro
+    restart: unless-stopped
